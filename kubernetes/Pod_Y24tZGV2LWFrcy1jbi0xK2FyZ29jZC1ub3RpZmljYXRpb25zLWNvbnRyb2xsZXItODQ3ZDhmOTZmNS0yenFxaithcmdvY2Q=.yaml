@@ -1,5 +1,6 @@
 apiversion: v1
 automountserviceaccounttoken: null
+datafilek8sautomountserviceaccounttoken_id: c948ca925ccf403aa58abeb624ef93df
 kind: Pod
 metadata:
   creationTimestamp: "2026-06-21T14:14:11Z"
