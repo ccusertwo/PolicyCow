@@ -1,6 +1,4 @@
 apiversion: v1
-automountserviceaccounttoken: null
-datafilek8sautomountserviceaccounttoken_id: 7a1bb148e54743739037f5029cf68901
 kind: Pod
 metadata:
   creationTimestamp: "2026-06-21T14:14:16Z"
@@ -22,7 +20,6 @@ metadata:
   uid: f72a73ab-0f26-409d-b551-ec2ede959386
 name: argocd/argocd-applicationset-controller-85db65b7f8-h2fqd
 spec:
-  automountServiceAccountToken: false
   containers:
   - args:
     - /usr/local/bin/argocd-applicationset-controller
@@ -169,7 +166,9 @@ spec:
         drop:
         - ALL
       readOnlyRootFilesystem: true
+      runAsGroup: 1000
       runAsNonRoot: true
+      runAsUser: 1000
       seccompProfile:
         type: RuntimeDefault
     terminationMessagePath: /dev/termination-log
