@@ -25,7 +25,7 @@ metadata:
     uid: 59cdeaf3-b501-4fa4-9a0c-1b4424f2337f
   resourceVersion: 617995772
   uid: 14eb9e9c-9eb9-40f1-ba06-93f27899a438
-name: kube-system/azure-cns-cv449
+name: kube-system/Pod/azure-cns-cv449
 spec:
   affinity:
     nodeAffinity:
