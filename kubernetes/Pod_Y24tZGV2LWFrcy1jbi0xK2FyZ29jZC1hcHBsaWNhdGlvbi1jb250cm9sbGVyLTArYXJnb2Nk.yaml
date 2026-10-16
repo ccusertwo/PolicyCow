@@ -1,5 +1,4 @@
 apiversion: v1
-automountserviceaccounttoken: null
 kind: Pod
 metadata:
   annotations:
@@ -23,7 +22,7 @@ metadata:
     uid: 60efe84b-fdf8-4187-bfe3-f2e741f0574c
   resourceVersion: 618005236
   uid: 1163ffa6-f401-457e-bcdb-b9d2a7974bc6
-name: argocd/argocd-application-controller-0
+name: argocd/Pod/argocd-application-controller-0
 spec:
   affinity:
     podAntiAffinity:
@@ -40,7 +39,6 @@ spec:
               app.kubernetes.io/part-of: argocd
           topologyKey: kubernetes.io/hostname
         weight: 5
-  automountServiceAccountToken: false
   containers:
   - args:
     - /usr/local/bin/argocd-application-controller
@@ -202,7 +200,9 @@ spec:
         drop:
         - ALL
       readOnlyRootFilesystem: true
+      runAsGroup: 1000
       runAsNonRoot: true
+      runAsUser: 1000
       seccompProfile:
         type: RuntimeDefault
     terminationMessagePath: /dev/termination-log
