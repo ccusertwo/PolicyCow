@@ -143,7 +143,8 @@ spec:
         name: alpine
         resources: null
         securityContext:
-          readOnlyRootFilesystem: true
+          seccompProfile:
+            type: RuntimeDefault
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
