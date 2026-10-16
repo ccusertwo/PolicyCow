@@ -133,6 +133,7 @@ spec:
       labels:
         app: alpine-test
     spec:
+      automountServiceAccountToken: false
       containers:
       - command:
         - sh
@@ -142,9 +143,6 @@ spec:
         imagePullPolicy: Always
         name: alpine
         resources: null
-        securityContext:
-          allowPrivilegeEscalation: false
-          privileged: false
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
