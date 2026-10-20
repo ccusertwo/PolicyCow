@@ -1,6 +1,5 @@
 apiversion: v1
 automountserviceaccounttoken: null
-datafilek8sautomountserviceaccounttoken_id: cb09b96463bc4563b9bc290d4651109e
 kind: Pod
 metadata:
   creationTimestamp: "2026-06-21T14:14:16Z"
@@ -20,7 +19,7 @@ metadata:
     uid: be851d85-037a-4d03-916b-8ceb286e01b5
   resourceVersion: 617993848
   uid: adf78509-916f-4cdc-ba48-a36576265f95
-name: argocd/argocd-dex-server-bbf598896-mnlvl
+name: argocd/Pod/argocd-dex-server-bbf598896-mnlvl
 spec:
   affinity:
     podAntiAffinity:
