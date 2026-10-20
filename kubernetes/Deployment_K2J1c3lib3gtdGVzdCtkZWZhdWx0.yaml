@@ -129,6 +129,7 @@ spec:
       labels:
         app: busybox-test
     spec:
+      automountServiceAccountToken: false
       containers:
       - command:
         - sh
@@ -138,9 +139,6 @@ spec:
         imagePullPolicy: Always
         name: busybox
         resources: null
-        securityContext:
-          seccompProfile:
-            type: RuntimeDefault
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
